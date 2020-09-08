@@ -25,7 +25,7 @@ SECRET_KEY = '@q3!wg^cgzl@&_o(b+^b)a1q60431iu2+i9*7o#w@p)aqe@s%*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://covtest-bysahil.herokuapp.com', 'http://127.0.0.1']
+ALLOWED_HOSTS = ['covtest-bysahil.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
