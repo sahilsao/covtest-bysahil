@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <title>Sterelise record</title>
+    <style type="text/css">
+            @page {
+            size: A4;
+            margin: 1cm;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 5px;
+            background-color: #fff;
+        }
+
+        .table th,
+        .table td {
+            padding: 5px;
+            vertical-align: top;
+            border-top: 1px solid #000;
+            text-align: center;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #000;
+        }
+
+        .table tbody + tbody {
+            border-top: 2px solid #000;
+        }
+
+        .table .table {
+            background-color: #fff;
+        }
+
+        .text-center {
+        text-align: center !important;
+        }
+        .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        }
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+        .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+        .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+        .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+        .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+        .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        }
+
+        .pb-3,
+        .py-3 {
+        padding-bottom: 1rem !important;
+        }
+        .img-container {
+            text-align: center;
+            display: block;
+        }
+    </style>
+
+<body class="container">
+    <span class="img-container">
+        <img alt= '' height = '40' width = 30 src="https://1.bp.blogspot.com/_FmAgiyWRJzo/TKRyQcrunZI/AAAAAAAAE1w/zAfyW2w8BBM/s1600/logoLAP.png">
+    </span>
+    <div class="text-center">
+        <h1 class="pt-5 pb-5" style="padding-bottom: 10px;">PATIENT COVID-19 TEST REPORT </h1>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">
+            <h6>Patient Name :</h6>
+        </div>
+        <div class="col-md-10">
+            {{ form.instance.project_name }}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">
+            <h6>Investigator Name :</h6>
+        </div>
+        <div class="col-md-10">
+            {{ form.instance.contractor_name }}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">
+            <h6>Test Type :</h6>
+        </div>
+        <div class="col-md-10">
+            {{ form.instance.pipe_type }}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">
+            <h6>Age Of Patient :</h6>
+        </div>
+        <div class="col-md-10">
+            {{ form.instance.pipe_size }}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </span></p>
+            <h6>Contact With Other Person :</h6>
+        </div>
+        <div class="col-md-10">
+            -
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">  
+            <h6>Days Stayed :</h6>
+        </div>
+        <div class="col-md-10">
+            
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2">     
+            <h6>Date of Test Conducted :</h6>
+        </div>
+        <div class="col-md-10">
+            {{ form.instance.done_on }}
+        </div>
+    </div>
+    <br />
+    <div class="row pb-3">
+        <div class="col-md-2">  
+            <h6>TEST RESULT :</h6>
+        </div>
+    </div>
+    <div class="row pb-3">
+        <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Place / Point</th>
+            <th scope="col">Time</th>
+            <th scope="col">RNA Found</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Point A</td>
+            <td>-</td>
+            <td>{{ form.instance.result_1 }}</td>
+            </tr>
+            <tr>
+            <td>Point B</td>
+            <td>-</td>
+            <td>{{ form.instance.result_2 }}</td>
+            </tr>
+            <tr>
+            <td>Point C</td>
+            <td>-</td>
+            <td>{{ form.instance.result_3 }}</td>
+            </tr>
+            <td>Point D</td>
+            <td>-</td>
+            <td>{{ form.instance.result_4 }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-2"> 
+            <h6>Comments :<h6>
+        </div>
+        <br>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-6">     
+            <h6>The test was conducted by :<h6>
+            <div class= "pt-3 text-left">
+            ..........................................................
+            </div>
+            <h6>Name :</h6>
+            <h6>Position :</h6>
+        </div>
+    </div>
+    <br />
+    <div>
+        <div class="col-md-6"> 
+            <h6>Investigator Name : {{ form.instance.contractor_name }}</h6>
+            <div class= "pt-3 text-left">
+            ..........................................................
+            </div>
+            <div class= "pb-3 pt-3">
+                <h6>Cop :</h6>
+            </div>
+        </div>
+    </div>
+    <br />
+</body>
+
+</html>
