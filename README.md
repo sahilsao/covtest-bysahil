@@ -25,11 +25,11 @@ Live version is [here](https://faizalazman.pythonanywhere.com/)
 
 ## How does the system looks ?
 ### Login Page
-![alt text](https://github.com/faizalazman/Centralised-Management-System-Django/blob/master/screenshots/login.jpg)
+![alt text](https://github.com/sahilsao/covtest-bysahil/blob/master/screenshots/login.png)
 ### Dashboard ( Where you can see what up with your files )
-![alt text](https://github.com/faizalazman/Centralised-Management-System-Django/blob/master/screenshots/Dashboard.jpg)
+![alt text](https://github.com/sahilsao/covtest-bysahil/blob/master/screenshots/dashboard.png)
 ### Edit File Details
-![alt text](https://github.com/faizalazman/Centralised-Management-System-Django/blob/master/screenshots/edit.jpg)
+![alt text](https://github.com/sahilsao/covtest-bysahil/blob/master/screenshots/edit.png)
 
 
 ## Contributing
